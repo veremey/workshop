@@ -1,25 +1,25 @@
 'use strict';
 
 // video
-	function ytInit() {
-		$(".video").each(function () {
-			$(this).find(".video_wrap").removeClass('video_wrap').addClass('video_wrap_pre');
-		});
-		$(".video_wrap_pre").each(function () {
-			var yt = $(this).data('yt');
-			if (yt) {
-				$(this).html("<img src='https://img.youtube.com/vi/" + yt + "/maxresdefault.jpg' style='width: 100%; display: block' class='go_yt' data-yt='" + yt + "'>");
-			}
-		});
-	}
-	ytInit();
-
-	$(".video_wrap_pre").on("click", function () {
-		ytInit();
-		var yt = $(this).data('yt');
-		$(this).removeClass("video_wrap_pre").addClass('video_wrap');
-		$(this).html("<iframe src='https://www.youtube.com/embed/" + yt + "?autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+function ytInit() {
+	$(".video").each(function () {
+		$(this).find(".video_wrap").removeClass('video_wrap').addClass('video_wrap_pre');
 	});
+	$(".video_wrap_pre").each(function () {
+		var yt = $(this).data('yt');
+		if (yt) {
+			$(this).html("<img src='https://img.youtube.com/vi/" + yt + "/maxresdefault.jpg' style='width: 100%; display: block' class='go_yt' data-yt='" + yt + "'>");
+		}
+	});
+}
+ytInit();
+
+$(".video_wrap_pre").on("click", function () {
+	ytInit();
+	var yt = $(this).data('yt');
+	$(this).removeClass("video_wrap_pre").addClass('video_wrap');
+	$(this).html("<iframe src='https://www.youtube.com/embed/" + yt + "?autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+});
 
 // ppp
 $('.js-ppp').click(function(e){
@@ -61,3 +61,4 @@ $(window).scroll(function() {
 	}
 	// if($(window).scrollTop() > $('#m_3').offset().top){}
 });
+
