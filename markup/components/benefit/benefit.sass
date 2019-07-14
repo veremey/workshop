@@ -1,0 +1,50 @@
+
+.benefit
+	width: 100%
+	background: #0d0d0d url('../img/content/black-bg5.jpg')
+	text-align: center
+	padding: 80px 0 70px
+	&__list
+		padding: 0
+		margin: 0
+		list-style: none
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 60px
+			width: 48%
+			counter-increment: step-counter
+			z-index: 1
+			&:before
+				content: counter(step-counter)
+				position: absolute
+				top: 0
+				left: 50%
+				+trx(-150%)
+				font-size: 200px
+				line-height: .8
+				color: rgba(153, 38, 30, .3)
+				+mb
+				z-index: -1
+	&__icon
+		display: inline-block
+		vertical-align: top
+		height: 120px
+		margin-bottom: 20px
+	&__wrap
+		width: 340px
+		margin: 0 auto
+		text-align: center
+		p
+			color: #fff
+			font-size: 22px
+			+mr
+	&__desc
+		font-size: 20px
+		color: $yellow
+	.title__section
+		font-size: 40px
+		color: #fff
+		margin-bottom: 1.8em

@@ -1,0 +1,55 @@
+<!doctype html>
+<html  lang="ru">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page">
+	<div class="page__wrapper">
+		{{> header/header}}
+		{{> hero/hero}}
+		{{> wait/wait}}
+		{{> benefit/benefit}}
+		{{> practic/practic}}
+		{{> youknow/youknow}}
+		{{> result/result}}
+		{{> autor/autor}}
+		{{> babak/babak}}
+		{{> participation/participation}}
+		{{> gallery/gallery}}
+		{{> place/place}}
+
+		{{> footer/footer}}
+	</div>
+
+	<script type="text/javascript">
+		var map;
+		var myIcon;
+		var center = [54.98, 82.89];
+
+
+		DG.then(function () {
+			// myIcon = DG.icon({
+			// 	iconUrl: './static/img/content/marker.png',
+			// 	iconSize: [71, 81]
+			// });
+
+			map = DG.map('map', {
+				center: center,
+				zoom: 13
+			});
+			// DG.marker(center, {
+			// 	icon: myIcon
+			// }).addTo(map);
+			DG.marker(center).addTo(map).bindLabel('ул. Пирогова, 6', {
+				static: true
+			});
+		});
+	</script>
+
+	<script src="static/js/separate-js/jquery.min.js"></script>
+	<script src="static/js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

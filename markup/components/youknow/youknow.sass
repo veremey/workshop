@@ -1,0 +1,96 @@
+
+.youknow
+	padding: 80px 0 140px
+	background: #0d0d0d url('../img/content/black-bg5.jpg')
+	text-align: center
+	overflow: hidden
+	&__wrap
+		display: flex
+		justify-content: space-between
+	&__text
+		width: 48%
+		text-align: left
+	&__list
+		position: relative
+		padding: 0 0 10px
+		margin: 0 0 30px
+		list-style: none
+		font-size: 0
+		border-bottom: 2px solid #fff
+		li
+			position: relative
+			text-align: left
+			font-size: 20px
+			margin-bottom: 15px
+			padding-left: 26px
+			color: #fff
+			counter-increment: step-counter
+			z-index: 1
+			+mt
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 6px
+				display: inline-block
+				width: 10px
+				height: 10px
+				background-color: $yellow
+				z-index: -2
+			&:before
+				content: counter(step-counter)
+				position: absolute
+				top: 4px
+				left: 0
+				font-size: 24px
+				line-height: .8
+				color: #fff
+				+mb
+				z-index: -1
+		b
+			+msb
+	&__pic
+		font-size: 0
+		position: relative
+		width: 48%
+		height: 0
+		padding-bottom: 25%
+		// overflow: hidden
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			left: 100%
+			top: 100%
+			width: 50%
+			height: 0
+			padding-bottom: 50%
+			display: inline-block
+			background-image: url(../img/content/watch-bg.png)
+			-webkit-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
+			background-size: cover
+			z-index: -1
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	&__desc
+		position: relative
+		font-size: 20px
+		color: $yellow
+		&:after
+			content: '+'
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(-105%, -50%)
+			font-size: 80px
+			color: $yellow
+			opacity: .3
+			+mbl
+	.title__section
+		color: #fff
+		text-align: center
+		margin-bottom: 1.8em

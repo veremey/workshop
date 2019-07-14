@@ -1,0 +1,121 @@
+
+.hero
+	height: 100vh
+	width: 100%
+	background: #0d0d0d url('../img/content/black-bg5.jpg')
+	height: 100vh
+	min-height: 660px
+	padding-top: 92px // header height
+	&__content
+		position: relative
+		padding-top: 20vh
+		+r(1100)
+			width: 70%
+		+r(650)
+			width: 70%
+		+r(500)
+			width: 100%
+		h4
+			font-size: 24px
+			+mr
+		.desc__y
+			font-size: 32px
+			color: $yellow
+			margin-bottom: .8em
+			+mt
+		p
+			font-size: 35px
+			+mb
+	&__footer
+		position: absolute
+		top: 100%
+		left: 50%
+		width: 100%
+		max-width: 780px
+		transform: translate(-50%, -50%)
+		padding: 20px 60px 15px
+		border-radius: 4px
+		box-shadow: 0 0 30px 20px rgba(0, 0, 0, .2)
+		border: 3px solid $yellow
+		background-color: rgba(54, 54, 54, .89)
+		text-align: center
+		z-index: 1
+		+r(1024)
+			padding: 10px 20px 12px
+			border-radius: 10px
+		+r(650)
+			transform: translate(-50%, -100%)
+			// left: 20px
+		+r(500)
+			transform: translate(0%, -100%)
+			left: 0px
+		h2
+			font-size: 25px
+			color: $yellow
+			text-transform: uppercase
+			+mbl
+		p
+			font-size: 20px
+			margin-bottom: .5em
+			color: #fff
+			+mr
+		b
+			+mb
+	&__list
+		list-style: none
+		padding: 0
+		margin: 0 0 10px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		li
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 10px
+			width: 30%
+	&__pic
+		position: relative
+		margin-bottom: 10px
+		img
+			display: inline-block
+			vertical-align: top
+			height: 56px
+	.layout
+		height: 100%
+		&-x
+			+r(650)
+				padding: 20px 20px 0
+	.paginator
+		span
+			top: 10px
+			bottom: auto
+	.section__img
+		+r(1400)
+			left: 70%
+			transform: translate(-70%, -50%)
+		+r(650)
+			left: 74%
+			transform: translate(-74%, -50%)
+	.btn
+		margin-top: 40px
+		+msb
+
+.right-box
+	position: absolute
+	top: 0
+	left: 0
+	width: 40px
+	bottom: 0
+	border-right: 1px solid rgba(255, 255, 255, .2)
+	+r(650)
+		position: static
+		width: auto
+
+	&__rotate
+		transform: rotate(-90deg) translate(-50vh, 0px)
+		white-space: nowrap
+		+r(650)
+			position: static
+			top: 0
+			+try(0)
+			white-space: normal
