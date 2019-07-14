@@ -1,5 +1,9 @@
 'use strict';
 
+$(document).ready(function () {
+	$('.page').addClass('is-loaded')
+});
+
 // video
 function ytInit() {
 	$(".video").each(function () {
@@ -44,6 +48,14 @@ function closePpp(){
 	$('.ppp__content').removeClass('is-active');
 	$('.page').removeClass('ppp-opened');
 }
+
+$('.js-goNext').click(function () {
+	var $next = $(this).parents('.section').next();
+	var $nextTop = $next.offset().top;
+
+	$('html,body').animate({
+		scrollTop: $nextTop}, 1000, 'swing');
+});
 
 $(document).on('click', function(el){
 	var childr = $('.ppp__shadow');

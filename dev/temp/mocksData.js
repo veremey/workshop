@@ -8,4 +8,7 @@
 __pages: [{
                 name: 'index',
                 href: 'index.html'
+             },{
+                name: 'thx',
+                href: 'thx.html'
              }]

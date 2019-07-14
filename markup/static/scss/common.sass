@@ -1,4 +1,111 @@
 
+.thx
+	.hero
+		background: #0d0d0d url('../img/content/black-bg5.jpg')
+		&__content
+			text-align: center
+		&__icon
+			margin-bottom: 30px
+			transform: rotate(-45deg) scale(.1)
+			+tr(.6s)
+		&__bottom
+			margin-top: 80px
+			position: relative
+			cursor: pointer
+			&:after
+				content: ''
+				position: absolute
+				top: 110%
+				left: 50%
+				width: 54px
+				height: 70px
+				background-image: url('../img/content/n-arrow.png')
+				background-size: cover
+				transform: translate(-50%, 0) rotate(90deg)
+		.title__main
+			font-size: 45px
+			&:after
+				content: none
+	&.is-loaded
+		.hero__icon
+			transform: rotate(0deg) scale(1)
+.time
+	padding: 100px 0 20px
+	.video
+	.justified
+		margin-bottom: 30px
+		color: #000
+		&__content
+			width: 100%
+	h3
+		font-size: 24px
+		color: #4d4d4d
+		+msb
+		&:after
+			content: none
+		mark
+			font-size: 20px
+	h2
+		font-size: 24px
+		text-transform: uppercase
+		color: #2a2a2a
+		+mbl
+	.price
+		color: $red
+		text-transform: none
+		font-size: 36px
+		+mbl
+	.border
+		padding: 40px
+		border: 2px solid $yellow
+		.justified
+			align-items: center
+			margin-bottom: 0
+
+.list-star
+	padding: 0
+	margin: 0
+	list-style: none
+	font-size: 0
+	li
+		position: relative
+		margin-bottom: 20px
+		padding-left: 20px
+		font-size: 20px
+		color: #4d4d4d
+		+mr
+		&:nth-of-type(2n)
+			+mb
+		&:before
+			content: ''
+			position: absolute
+			top: 0.1em
+			left: 0
+			display: inline-block
+			width: 16px
+			height: 16px
+			background-image: url('../img/content/star.png')
+			background-size: cover
+
+.method
+	display: block
+	width: 100%
+	text-align: center
+	margin: 0 auto
+	max-width: 346px
+	&__field
+		border: 1px solid #a9a9a9
+		border-radius: 20px
+		margin-bottom: 10px
+		padding: 14px
+	&__pic
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 30px
+	.btn
+		margin-top: 30px
+
 .merits
 	padding: 0
 	margin: 0
@@ -76,7 +183,7 @@
 		left: 0
 		top: 0
 		font-size: 14px
-		color: #fff
+		color: #adacac
 		cursor: pointer
 		user-select: none
 		+mr
@@ -120,45 +227,6 @@
 			height: 5px
 			background: $red
 			+rotate(45)
-
-.ppp
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	align-items: center
-	justify-content: center
-	display: none
-	z-index: -100
-	&.is-active
-		display: flex
-		z-index: 1000
-	&__shadow
-		+coverdiv
-		background-color: rgba(0, 0, 0, .9)
-	&__content
-		position: relative
-		width: 100%
-		max-width: 584px
-		max-height: 80vh
-		background-color: #fff
-		padding: 30px 20px 20px
-		text-align: center
-		border-radius: 10px
-		overflow: hidden
-		display: none
-		&.is-active
-			display: block
-	mark
-		background-color: $n
-		color: $red
-	.btn
-		margin: 0 auto
-	.check
-		position: relative
-		span
-			color: $black
 
 .mod-mb-40
 	margin-bottom: 40px
