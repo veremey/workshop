@@ -546,7 +546,7 @@ template {
   max-width: 100%;
 }
 
-.wait .video {
+.video {
   position: relative;
   cursor: pointer;
   width: 100%;
@@ -556,7 +556,7 @@ template {
   z-index: 1;
 }
 
-.wait .video:before {
+.video:before {
   content: '';
   position: absolute;
   left: 100%;
@@ -572,7 +572,7 @@ template {
   z-index: -1;
 }
 
-.wait .video_wrap_pre:after {
+.video_wrap_pre:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -586,7 +586,7 @@ template {
   border-color: transparent transparent transparent #94251d;
 }
 
-.wait .video iframe {
+.video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -1505,6 +1505,23 @@ template {
           transform: rotate(0deg) scale(1);
 }
 
+.thx .footer {
+  background: #fff url(../img/content/wh-bg.jpg) repeat;
+  background-position-x: -6px;
+}
+
+.thx .footer__list a {
+  color: #000;
+}
+
+.thx .footer p {
+  color: #000;
+}
+
+.thx .f-socio svg {
+  fill: #94251d;
+}
+
 .time {
   padding: 100px 0 20px;
 }
@@ -1599,11 +1616,12 @@ template {
   display: block;
   width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0 0 40px;
   max-width: 346px;
 }
 
 .method__field {
+  position: relative;
   border: 1px solid #a9a9a9;
   border-radius: 20px;
   margin-bottom: 10px;
@@ -1614,9 +1632,8 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1711,7 +1728,7 @@ template {
 .check input {
   position: absolute;
   top: 2px;
-  left: 0;
+  right: 0;
   z-index: 2;
   opacity: 0;
 }
@@ -1724,19 +1741,20 @@ template {
 }
 
 .check input:checked ~ span:before {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .check input:checked ~ span:after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  right: 4px;
   display: inline-block;
   vertical-align: top;
   width: 10px;
-  height: 8px;
-  background-image: url("../img/content/icon-selector-checked.png");
+  height: 10px;
+  border-radius: 100%;
+  background-color: #94251d;
 }
 
 .check input:disabled ~ span {
@@ -1745,8 +1763,8 @@ template {
 
 .check span {
   position: relative;
-  padding-left: 28px;
-  left: 0;
+  padding-right: 28px;
+  right: 0;
   top: 0;
   font-size: 14px;
   color: #adacac;
@@ -1771,12 +1789,12 @@ template {
   content: "";
   position: absolute;
   top: -1px;
-  left: 0;
+  right: 0;
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 100%;
-  border: 1px solid #f29c2f;
+  border: 1px solid #535353;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
