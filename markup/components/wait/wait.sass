@@ -4,9 +4,22 @@
 	background: #fff url('../img/content/wh-bg.jpg')
 	padding-top: 180px
 	padding-bottom: 120px
+	+r(1000)
+		overflow: hidden
+	+r(880)
+		padding: 40px 0
 	&__video,
 	&__content
 		width: 48%
+		+r(1000)
+			width: 100%
+	&__content
+		+r(1000)
+			order: -1
+			text-align: center
+			margin: 20px auto 40px
+		+r(650)
+			margin: 20px auto 0
 	h2
 		display: inline-block
 		position: relative
@@ -15,6 +28,8 @@
 		color: #2f2f2f
 		+mbl
 		z-index: 1
+		+r(650)
+			font-size: 28px
 		span
 			position: relative
 			&:before

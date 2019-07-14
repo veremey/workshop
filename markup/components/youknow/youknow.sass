@@ -4,12 +4,21 @@
 	background: #0d0d0d url('../img/content/black-bg5.jpg')
 	text-align: center
 	overflow: hidden
+	+r(880)
+		padding: 60px 0
 	&__wrap
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
+		+r(880)
+			width: 100%
+			max-width: 450px
+			margin: 0 auto
 	&__text
 		width: 48%
 		text-align: left
+		+r(880)
+			width: 100%
 	&__list
 		position: relative
 		padding: 0 0 10px
@@ -27,6 +36,8 @@
 			counter-increment: step-counter
 			z-index: 1
 			+mt
+			+r(650)
+				font-size: 18px
 			&:after
 				content: ''
 				position: absolute
@@ -57,6 +68,12 @@
 		padding-bottom: 25%
 		// overflow: hidden
 		z-index: 1
+		+r(880)
+			width: 100%
+			padding-bottom: 50%
+			overflow: hidden
+			order: -1
+			margin-bottom: 30px
 		&:after
 			content: ''
 			position: absolute
@@ -80,6 +97,8 @@
 		position: relative
 		font-size: 20px
 		color: $yellow
+		+r(650)
+			font-size: 18px
 		&:after
 			content: '+'
 			position: absolute
@@ -94,3 +113,5 @@
 		color: #fff
 		text-align: center
 		margin-bottom: 1.8em
+		+r(880)
+			margin-bottom: 1.2em

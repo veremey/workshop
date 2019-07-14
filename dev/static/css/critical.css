@@ -360,6 +360,14 @@ template {
   font-weight: 900;
 }
 
+@media only screen and (max-width: 650px) {
+  .title__main {
+    font-size: 34px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
 .title__main:after {
   content: '';
   position: absolute;
@@ -371,6 +379,13 @@ template {
   background-color: #f29c2f;
 }
 
+@media only screen and (max-width: 650px) {
+  .title__main:after {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .title__section {
   display: inline-block;
   position: relative;
@@ -380,6 +395,12 @@ template {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   z-index: 1;
+}
+
+@media only screen and (max-width: 650px) {
+  .title__section {
+    font-size: 26px;
+  }
 }
 
 .title__section span {
@@ -478,6 +499,13 @@ template {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 650px) {
+  .btn-red {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 
 .btn-red:hover {
@@ -641,7 +669,7 @@ mark {
   padding: 0 65px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 765px) {
   .layout-x {
     padding: 0 20px;
   }
@@ -788,6 +816,9 @@ mark {
 
 .header__list a {
   color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -810,6 +841,8 @@ mark {
             justify-content: center;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -866,7 +899,7 @@ mark {
 
 .trigger {
   position: absolute;
-  top: 30px;
+  top: 9px;
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -883,7 +916,7 @@ mark {
   z-index: 1010;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1220px) {
   .trigger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -908,8 +941,8 @@ mark {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 36px;
-  height: 20px;
+  width: 40px;
+  height: 25px;
   padding: 2px;
   z-index: 9;
   cursor: pointer;
@@ -948,27 +981,88 @@ mark {
   left: 0;
 }
 
-.line {
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  vertical-align: top;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  height: 2px;
+.burger-3 {
+  display: block;
+  width: 40px;
+  height: 5px;
+  position: relative;
+  top: 0px;
   background-color: #fff;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.line-1 {
-  top: 4px;
-  width: 32px;
+.burger-3::after {
+  position: relative;
+  display: block;
+  content: ' ';
+  top: 5px;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: transform, top;
+  transition-property: transform, top, -webkit-transform;
+  -webkit-transition-duration: 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
 }
 
-.line-2 {
-  width: 26px;
-  bottom: 4px;
+.burger-3::before {
+  position: relative;
+  display: block;
+  content: ' ';
+  bottom: 10px;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: transform, bottom;
+  transition-property: transform, bottom, -webkit-transform;
+  -webkit-transition-duration: 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
+}
+
+.burger-3:hover {
+  opacity: 0.8;
+}
+
+.burger-active-3 {
+  background-color: transparent;
+}
+
+.burger-active-3::before {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-property: bottom, transform;
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
+}
+
+.burger-active-3::after {
+  top: -5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition-duration: 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+  transition-property: top, transform, -webkit-transform;
+  -webkit-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
 }
 
 .is-scrolled .header {
@@ -985,6 +1079,13 @@ mark {
   padding-top: 92px;
 }
 
+@media only screen and (max-width: 880px) {
+  .hero {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
+
 .hero__content {
   position: relative;
   padding-top: 20vh;
@@ -996,15 +1097,21 @@ mark {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .hero__content {
-    width: 70%;
+    width: 100%;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 880px) {
   .hero__content {
-    width: 100%;
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .hero__content {
+    text-align: center;
   }
 }
 
@@ -1012,6 +1119,12 @@ mark {
   font-size: 24px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 650px) {
+  .hero__content h4 {
+    font-size: 14px;
+  }
 }
 
 .hero__content .desc__y {
@@ -1022,10 +1135,24 @@ mark {
   font-weight: 100;
 }
 
+@media only screen and (max-width: 650px) {
+  .hero__content .desc__y {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+}
+
 .hero__content p {
   font-size: 35px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 650px) {
+  .hero__content p {
+    font-size: 26px;
+  }
 }
 
 .hero__footer {
@@ -1053,18 +1180,14 @@ mark {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 880px) {
   .hero__footer {
-    -webkit-transform: translate(-50%, -100%);
-            transform: translate(-50%, -100%);
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .hero__footer {
-    -webkit-transform: translate(0%, -100%);
-            transform: translate(0%, -100%);
+    position: static;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
     left: 0px;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
 
@@ -1082,6 +1205,12 @@ mark {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 650px) {
+  .hero__footer p {
+    font-size: 18px;
+  }
 }
 
 .hero__footer b {
@@ -1108,6 +1237,14 @@ mark {
   vertical-align: top;
   margin-bottom: 10px;
   width: 30%;
+}
+
+@media only screen and (max-width: 880px) {
+  .hero__list li {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 10px;
+  }
 }
 
 .hero__pic {
@@ -1144,6 +1281,12 @@ mark {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .hero .section__img {
+    opacity: .4;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .hero .section__img {
     left: 74%;
@@ -1158,19 +1301,38 @@ mark {
   font-weight: 600;
 }
 
+@media only screen and (max-width: 650px) {
+  .hero .btn {
+    margin-top: 30px;
+  }
+}
+
 .right-box {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -92px;
+  left: -74px;
   width: 40px;
   bottom: 0;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .right-box {
     position: static;
     width: auto;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.right-box .socio {
+  position: static;
+}
+
+@media only screen and (max-width: 650px) {
+  .right-box .socio {
+    text-align: center;
   }
 }
 
@@ -1218,7 +1380,7 @@ mark {
 
 @media only screen and (max-width: 650px) {
   .socio li {
-    margin: 0 4px;
+    margin: 0 14px;
   }
 }
 
@@ -1231,6 +1393,13 @@ mark {
   border-radius: 2px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media only screen and (max-width: 650px) {
+  .socio a {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .socio a:hover {

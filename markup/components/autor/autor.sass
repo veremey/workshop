@@ -1,11 +1,10 @@
 
 .autor
-	padding: 70px 0 75px
 	padding: 80px 0 140px
 	background: #0d0d0d url('../img/content/black-bg5.jpg')
 	text-align: center
-	+r(500)
-		padding-bottom: 40px
+	+r(880)
+		padding: 60px 0
 	.title__section
 		color: #fff
 
@@ -28,13 +27,18 @@
 		&.no-flex
 			display: inline-block
 			text-align: left
+			+r(880)
+				width: 100%
+				max-width: 450px
+				margin: 0 auto
 	&__pic
 		position: relative
 		box-shadow: 0 10px 10px 0px rgba(0, 0, 0, .5)
 		font-size: 0
-		+r(850)
+		+r(880)
 			width: 100%
 			max-width: 300px
+			margin-bottom: 40px
 		&:before
 			content: ''
 			position: absolute
@@ -85,14 +89,14 @@
 		margin-bottom: 20px
 		color: #fff
 		+r(850)
-			margin-bottom: 10px
+			margin-bottom: 16px
 	b
 		+msb
 	p
 		font-size: 20px
 		+ml
-		+r(500)
-			font-size: 14px
+		+r(650)
+			font-size: 18px
 	&__pic
 		position: relative
 		display: inline-block
@@ -113,6 +117,9 @@
 			max-height: 40px
 			max-width: 40px
 			fill: $yellow
+			+r(650)
+				max-height: 30px
+				max-width: 30px
 		.m-03
 			transform: translate(-64%, -64%) rotate(-45deg)
 		.m-08

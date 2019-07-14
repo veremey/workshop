@@ -6,26 +6,38 @@
 	height: 100vh
 	min-height: 660px
 	padding-top: 92px // header height
+	+r(880)
+		height: auto
+		padding-bottom: 20px
 	&__content
 		position: relative
 		padding-top: 20vh
 		+r(1100)
 			width: 70%
-		+r(650)
-			width: 70%
-		+r(500)
+		+r(1000)
 			width: 100%
+		+r(880)
+			padding-top: 50px
+		+r(650)
+			text-align: center
 		h4
 			font-size: 24px
 			+mr
+			+r(650)
+				font-size: 14px
 		.desc__y
 			font-size: 32px
 			color: $yellow
 			margin-bottom: .8em
 			+mt
+			+r(650)
+				font-size: 20px
+				+mr
 		p
 			font-size: 35px
 			+mb
+			+r(650)
+				font-size: 26px
 	&__footer
 		position: absolute
 		top: 100%
@@ -43,12 +55,12 @@
 		+r(1024)
 			padding: 10px 20px 12px
 			border-radius: 10px
-		+r(650)
-			transform: translate(-50%, -100%)
-			// left: 20px
-		+r(500)
-			transform: translate(0%, -100%)
+		+r(880)
+			position: static
+			transform: translate(0%)
 			left: 0px
+			max-width: 450px
+			margin: 0 auto
 		h2
 			font-size: 25px
 			color: $yellow
@@ -59,6 +71,8 @@
 			margin-bottom: .5em
 			color: #fff
 			+mr
+			+r(650)
+				font-size: 18px
 		b
 			+mb
 	&__list
@@ -73,6 +87,10 @@
 			vertical-align: top
 			margin-bottom: 10px
 			width: 30%
+			+r(880)
+				width: 100%
+				max-width: 300px
+				margin: 0 auto 10px
 	&__pic
 		position: relative
 		margin-bottom: 10px
@@ -93,23 +111,34 @@
 		+r(1400)
 			left: 70%
 			transform: translate(-70%, -50%)
+		+r(1000)
+			opacity: .4
 		+r(650)
 			left: 74%
 			transform: translate(-74%, -50%)
 	.btn
 		margin-top: 40px
 		+msb
+		+r(650)
+			margin-top: 30px
 
 .right-box
 	position: absolute
-	top: 0
-	left: 0
+	top: -92px
+	left: -74px
 	width: 40px
 	bottom: 0
 	border-right: 1px solid rgba(255, 255, 255, .2)
-	+r(650)
+	+r(1000)
 		position: static
 		width: auto
+		height: 40px
+		margin-top: 40px
+		margin-bottom: 40px
+	.socio
+		position: static
+		+r(650)
+			text-align: center
 
 	&__rotate
 		transform: rotate(-90deg) translate(-50vh, 0px)

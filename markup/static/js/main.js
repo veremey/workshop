@@ -4,14 +4,11 @@ $(document).ready(function () {
 	$('.page').addClass('is-loaded');
 });
 
-$(function() {
-	$('#navigation').navpoints({
-		speed: 1000,
-		currentClass: 'is-active',
-		updateHash: true,
-		classToParent: true,
-		offset: 70
-	});
+
+
+$(".trigger__btn").click(function() {
+  $(this).find(".burger-3").toggleClass("burger-active-3");
+  $('.trigger').toggleClass('is-active');
 });
 
 // video
@@ -67,6 +64,24 @@ $('.js-goNext').click(function () {
 		scrollTop: $nextTop}, 1000, 'swing');
 });
 
+if($(document).width() < 1220){
+	$('.header__list a').on('click touchstart', function(){
+		$('.header__list li').removeClass('is-active');
+		$(this).parent().addClass('is-active');
+		$('.trigger').toggleClass('is-active');
+	});
+} else {
+	$(function() {
+		$('#navigation').navpoints({
+			speed: 1000,
+			currentClass: 'is-active',
+			updateHash: true,
+			classToParent: true,
+			offset: 70
+		});
+	});
+}
+
 $(document).on('click', function(el){
 	var childr = $('.ppp__shadow');
 
@@ -74,6 +89,7 @@ $(document).on('click', function(el){
 		closePpp();
 	}
 });
+
 
 $(window).scroll(function() {
 	if($(window).scrollTop() > $('.hero').height()*.2){

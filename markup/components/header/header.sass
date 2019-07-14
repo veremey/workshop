@@ -26,6 +26,8 @@
 					color: $yellow
 		a
 			color: #fff
+			font-size: 16px
+			+mb
 			+tr(.4s)
 	&__wrap
 		+r(1220)
@@ -39,6 +41,7 @@
 			justify-content: center
 			background-color: rgba(0, 0, 0, .9)
 			z-index: 1000
+			+tr(.4s)
 	.layout-s
 		display: flex
 		align-items: center
@@ -72,10 +75,9 @@
 		+r(360)
 			height: 26px
 
-
 .trigger
 	position: absolute
-	top: 30px
+	top: 9px
 	right: 20px
 	display: flex
 	align-items: center
@@ -83,7 +85,7 @@
 	user-select: none
 	display: none
 	z-index: 1010
-	+r(1200)
+	+r(1220)
 		display: flex
 	+r(500)
 		right: 10px
@@ -94,8 +96,8 @@
 		display: inline-block
 		vertical-align: top
 		position: relative
-		width: 36px
-		height: 20px
+		width: 40px
+		height: 25px
 		padding: 2px
 		z-index: 9
 		cursor: pointer
@@ -117,21 +119,56 @@
 				+rotate(-45)
 		+ .header__wrap
 			left: 0
-.line
-	position: absolute
-	right: 0
-	display: inline-block
-	vertical-align: top
-	transform-origin: 50% 50%
-	height: 2px
+
+.burger-3
+	display: block
+	width: 40px
+	height: 5px
+	position: relative
+	top: 0px
 	background-color: #fff
-	+tr(.6s)
-	&-1
-		top: 4px
-		width: 32px
-	&-2
-		width: 26px
-		bottom: 4px
+	transition: all 0.3s ease-out
+	&::after
+		position: relative
+		display: block
+		content: ' '
+		top: 5px
+		width: 40px
+		height: 5px
+		background-color: #fff
+		transition-property: transform, top
+		transition-duration: 0.2s, 0.2s
+		transition-delay: 0s, 0.2s
+	&::before
+		position: relative
+		display: block
+		content: ' '
+		bottom: 10px
+		width: 40px
+		height: 5px
+		background-color: #fff
+		transition-property: transform, bottom
+		transition-duration: 0.2s, 0.2s
+		transition-delay: 0s, 0.2s
+	&:hover
+		opacity: 0.8
+
+.burger-active-3
+	background-color: transparent
+	&::before
+		bottom: 0
+		transform: rotate(45deg)
+		-webkit-transition-property: bottom, transform
+		transition-property: bottom, transform
+		transition-duration: 0.2s, 0.2s
+		transition-delay: 0s, 0.2s
+	&::after
+		top: -5px
+		transform: rotate(-45deg)
+		transition-duration: 0.2s, 0.2s
+		transition-property: top, transform
+		transition-delay: 0s, 0.2s
+
 
 .is-scrolled
 	.header

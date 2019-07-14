@@ -2,6 +2,10 @@
 	padding: 90px 0 120px
 	text-align: center
 	overflow: hidden
+	+r(1000)
+		padding: 60px 0
+	+r(880)
+		padding: 40px 0
 	&__list
 		padding: 20px
 		margin: 0
@@ -10,11 +14,19 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		+r(650)
+			max-width: 340px
+			margin: 0 auto
 		li
 			position: relative
 			display: inline-block
 			vertical-align: top
+			margin-bottom: 20px
 			z-index: 1
+			+r(880)
+				width: 100%
+				max-width: 450px
+				margin: 0 auto 20px
 			&:nth-child(3n+1)
 				&:after
 					content: ''
@@ -53,6 +65,10 @@
 		width: 350px
 		height: 350px
 		overflow: hidden
+		+r(880)
+			width: 100%
+		+r(650)
+			height: 200px
 		img
 			+vcenter
 			min-height: 100%
@@ -66,3 +82,5 @@
 		+try(0)
 	.title__section
 		margin-bottom: 80px
+		+r(650)
+			margin-bottom: 30px
