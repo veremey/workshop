@@ -1,7 +1,17 @@
 'use strict';
 
 $(document).ready(function () {
-	$('.page').addClass('is-loaded')
+	$('.page').addClass('is-loaded');
+});
+
+$(function() {
+	$('#navigation').navpoints({
+		speed: 1000,
+		currentClass: 'is-active',
+		updateHash: true,
+		classToParent: true,
+		offset: 70
+	});
 });
 
 // video
