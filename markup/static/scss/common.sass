@@ -1,5 +1,8 @@
 
 .thx
+	.layout
+		+r(1200)
+			padding: 0 20px
 	.hero
 		background: #0d0d0d url('../img/content/black-bg5.jpg')
 		&__content
@@ -210,9 +213,10 @@
 
 
 .flip-clock-wrapper
+	margin: 0
 	+r(1024)
 		width: 100%
-		max-width: 405px
+		max-width: 520px
 		margin: 0 auto
 	+r(460)
 		width: calc(100% + 10px)
@@ -222,26 +226,41 @@
 .flip-clock-wrapper a
 	color: #fff
 .flip-clock-wrapper ul
-	+r(1130)
+	+r(1470)
 		width: 50px
-	+r(1130)
+	+r(1300)
+		width: 40px
+	+r(1024)
 		width: 50px
-	+r(460)
-		width: 34px
-		height: 60px
-		font-size: 60px
-		line-height: 56px
+	+r(560)
+		width: 24px
+		height: 50px
+		font-size: 50px
+		line-height: 66px
 		margin: 2px
 		padding: 16px
+	+r(400)
+		padding: 10px
+		font-size: 40px
 .flip-clock-wrapper ul li
-	+r(460)
+	+r(560)
 		line-height: 56px
 .flip-clock-wrapper ul li a div div.inn
-	+r(460)
+	+r(560)
 		font-size: 46px
+	+r(400)
+		font-size: 36px
 .flip-clock-divider
-	+r(460)
-		height: 84px
+	+r(1050)
+		width: 10px
+	+r(560)
+		height: 44px
+.flip-clock-dot
+	+r(1050)
+		left: 0
+	&.bottom
+		+r(560)
+			bottom: 22px
 
 
 .flip-clock-wrapper ul.play li.flip-clock-active .up .shadow

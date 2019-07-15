@@ -2,15 +2,14 @@
 
 $(document).ready(function () {
 	$('.page').addClass('is-loaded');
-	var clock;
 
-	$(document).ready(function() {
+	var date = new Date('2019-07-16 05:02:12 pm');
 
-		clock = $('.timer__wrap').FlipClock(3600, {
-			clockFace: 'HourlyCounter',
-			countdown: true
-		});
+	var clock = $('.timer__wrap').FlipClock(date, {
+		clockFace: 'DailyCounter',
+		countdown: true
 	});
+
 });
 
 

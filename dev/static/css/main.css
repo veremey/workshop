@@ -1883,6 +1883,12 @@ template {
 }
 
 /* Additional style files. */
+@media only screen and (max-width: 1200px) {
+  .thx .layout {
+    padding: 0 20px;
+  }
+}
+
 .thx .hero {
   background: #0d0d0d url("../img/content/black-bg5.jpg");
 }
@@ -2232,10 +2238,14 @@ template {
   transition: 0.4s;
 }
 
+.flip-clock-wrapper {
+  margin: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   .flip-clock-wrapper {
     width: 100%;
-    max-width: 405px;
+    max-width: 520px;
     margin: 0 auto;
   }
 }
@@ -2255,44 +2265,81 @@ template {
   color: #fff;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1470px) {
   .flip-clock-wrapper ul {
     width: 50px;
   }
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1300px) {
+  .flip-clock-wrapper ul {
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
   .flip-clock-wrapper ul {
     width: 50px;
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 560px) {
   .flip-clock-wrapper ul {
-    width: 34px;
-    height: 60px;
-    font-size: 60px;
-    line-height: 56px;
+    width: 24px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 66px;
     margin: 2px;
     padding: 16px;
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 400px) {
+  .flip-clock-wrapper ul {
+    padding: 10px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
   .flip-clock-wrapper ul li {
     line-height: 56px;
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 560px) {
   .flip-clock-wrapper ul li a div div.inn {
     font-size: 46px;
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 400px) {
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
   .flip-clock-divider {
-    height: 84px;
+    width: 10px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .flip-clock-divider {
+    height: 44px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .flip-clock-dot {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .flip-clock-dot.bottom {
+    bottom: 22px;
   }
 }
 
