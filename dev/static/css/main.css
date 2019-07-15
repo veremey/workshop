@@ -2240,6 +2240,13 @@ template {
   }
 }
 
+@media only screen and (max-width: 460px) {
+  .flip-clock-wrapper {
+    width: calc(100% + 10px);
+    margin-left: -10px;
+  }
+}
+
 .flip-clock-label {
   display: none;
 }
@@ -2262,10 +2269,12 @@ template {
 
 @media only screen and (max-width: 460px) {
   .flip-clock-wrapper ul {
-    width: 40px;
+    width: 34px;
     height: 60px;
     font-size: 60px;
     line-height: 56px;
+    margin: 2px;
+    padding: 16px;
   }
 }
 
@@ -2277,7 +2286,7 @@ template {
 
 @media only screen and (max-width: 460px) {
   .flip-clock-wrapper ul li a div div.inn {
-    font-size: 56px;
+    font-size: 46px;
   }
 }
 
