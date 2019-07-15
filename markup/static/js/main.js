@@ -2,6 +2,15 @@
 
 $(document).ready(function () {
 	$('.page').addClass('is-loaded');
+	var clock;
+
+	$(document).ready(function() {
+
+		clock = $('.timer__wrap').FlipClock(3600, {
+			clockFace: 'HourlyCounter',
+			countdown: true
+		});
+	});
 });
 
 

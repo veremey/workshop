@@ -1326,12 +1326,9 @@ mark {
   }
 }
 
-.right-box .socio {
-  position: static;
-}
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .right-box .socio {
+    position: static;
     text-align: center;
   }
 }
@@ -1363,7 +1360,7 @@ mark {
   font-size: 0;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .socio {
     position: static;
     margin-top: 10px;
@@ -1378,7 +1375,7 @@ mark {
   margin: 0 6px 25px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .socio li {
     margin: 0 14px;
   }
@@ -1395,7 +1392,7 @@ mark {
   transition: 0.4s;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1000px) {
   .socio a {
     width: 30px;
     height: 30px;

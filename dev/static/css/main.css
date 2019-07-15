@@ -1889,6 +1889,15 @@ template {
 
 .thx .hero__content {
   text-align: center;
+  position: static;
+}
+
+@media only screen and (max-width: 1100px) {
+  .thx .hero__content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px;
+  }
 }
 
 .thx .hero__icon {
@@ -1897,6 +1906,12 @@ template {
           transform: rotate(-45deg) scale(0.1);
   -webkit-transition: 0.6s;
   transition: 0.6s;
+}
+
+@media only screen and (max-width: 650px) {
+  .thx .hero__icon {
+    height: 100px;
+  }
 }
 
 .thx .hero__bottom {
@@ -1920,6 +1935,12 @@ template {
 
 .thx .hero .title__main {
   font-size: 45px;
+}
+
+@media only screen and (max-width: 650px) {
+  .thx .hero .title__main {
+    font-size: 32px;
+  }
 }
 
 .thx .hero .title__main:after {
@@ -1950,6 +1971,13 @@ template {
 
 .time {
   padding: 100px 0 20px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  .time {
+    padding: 60px 0 20px;
+  }
 }
 
 .time .justified {
@@ -1957,8 +1985,24 @@ template {
   color: #000;
 }
 
+@media only screen and (max-width: 650px) {
+  .time .justified {
+    margin-bottom: 0px;
+  }
+}
+
 .time .justified__content {
   width: 100%;
+}
+
+.time .justified__item {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 650px) {
+  .time .justified__item {
+    margin-bottom: 60px;
+  }
 }
 
 .time h3 {
@@ -1992,9 +2036,35 @@ template {
   font-weight: 900;
 }
 
+@media only screen and (max-width: 1400px) {
+  .time .price {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .time .price {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .time .border {
   padding: 40px;
   border: 2px solid #f29c2f;
+}
+
+@media only screen and (max-width: 1300px) {
+  .time .border {
+    padding: 40px 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .time .border {
+    max-width: 650px;
+    margin: 0 auto;
+  }
 }
 
 .time .border .justified {
@@ -2011,10 +2081,16 @@ template {
   font-size: 0;
 }
 
+@media only screen and (max-width: 650px) {
+  .list-star {
+    margin: 0 auto;
+  }
+}
+
 .list-star li {
   position: relative;
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 20px;
   color: #4d4d4d;
   font-family: 'Montserrat', sans-serif;
@@ -2044,6 +2120,12 @@ template {
   text-align: center;
   margin: 0 0 0 40px;
   max-width: 346px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .method {
+    margin: 0 auto;
+  }
 }
 
 .method__field {
@@ -2148,6 +2230,77 @@ template {
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media only screen and (max-width: 1024px) {
+  .flip-clock-wrapper {
+    width: 100%;
+    max-width: 405px;
+    margin: 0 auto;
+  }
+}
+
+.flip-clock-label {
+  display: none;
+}
+
+.flip-clock-wrapper a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1130px) {
+  .flip-clock-wrapper ul {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .flip-clock-wrapper ul {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .flip-clock-wrapper ul {
+    width: 40px;
+    height: 60px;
+    font-size: 60px;
+    line-height: 56px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .flip-clock-wrapper ul li {
+    line-height: 56px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size: 56px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .flip-clock-divider {
+    height: 84px;
+  }
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background-color: #f29c2f;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background-color: #f29c2f;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background-color: #f29c2f;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background-color: #f29c2f;
 }
 
 .dots-list {

@@ -4,10 +4,17 @@
 		background: #0d0d0d url('../img/content/black-bg5.jpg')
 		&__content
 			text-align: center
+			position: static
+			+r(1100)
+				width: 100%
+				height: auto
+				padding-bottom: 60px
 		&__icon
 			margin-bottom: 30px
 			transform: rotate(-45deg) scale(.1)
 			+tr(.6s)
+			+r(650)
+				height: 100px
 		&__bottom
 			margin-top: 80px
 			position: relative
@@ -24,6 +31,8 @@
 				transform: translate(-50%, 0) rotate(90deg)
 		.title__main
 			font-size: 45px
+			+r(650)
+				font-size: 32px
 			&:after
 				content: none
 	&.is-loaded
@@ -40,16 +49,23 @@
 	.f-socio svg
 		fill: $red
 
-
-
 .time
 	padding: 100px 0 20px
+	overflow: hidden
+	+r(1000)
+		padding: 60px 0 20px
 	.video
 	.justified
 		margin-bottom: 30px
 		color: #000
+		+r(650)
+			margin-bottom: 0px
 		&__content
 			width: 100%
+		&__item
+			margin-bottom: 30px
+			+r(650)
+				margin-bottom: 60px
 	h3
 		font-size: 24px
 		color: #4d4d4d
@@ -68,9 +84,19 @@
 		text-transform: none
 		font-size: 36px
 		+mbl
+		+r(1400)
+			font-size: 26px
+		+r(650)
+			margin: 0 auto
+			text-align: center
 	.border
 		padding: 40px
 		border: 2px solid $yellow
+		+r(1300)
+			padding: 40px 10px
+		+r(1024)
+			max-width: 650px
+			margin: 0 auto
 		.justified
 			align-items: center
 			margin-bottom: 0
@@ -80,10 +106,12 @@
 	margin: 0
 	list-style: none
 	font-size: 0
+	+r(650)
+		margin: 0 auto
 	li
 		position: relative
 		margin-bottom: 20px
-		padding-left: 20px
+		padding-left: 30px
 		font-size: 20px
 		color: #4d4d4d
 		+mr
@@ -106,6 +134,8 @@
 	text-align: center
 	margin: 0 0 0 40px
 	max-width: 346px
+	+r(1000)
+		margin: 0 auto
 	&__field
 		position: relative
 		border: 1px solid #a9a9a9
@@ -177,6 +207,48 @@
 			border: 1px solid #535353
 			cursor: pointer
 			+tr(.4s)
+
+
+.flip-clock-wrapper
+	+r(1024)
+		width: 100%
+		max-width: 405px
+		margin: 0 auto
+.flip-clock-label
+	display: none
+.flip-clock-wrapper a
+	color: #fff
+.flip-clock-wrapper ul
+	+r(1130)
+		width: 50px
+	+r(1130)
+		width: 50px
+	+r(460)
+		width: 40px
+		height: 60px
+		font-size: 60px
+		line-height: 56px
+.flip-clock-wrapper ul li
+	+r(460)
+		line-height: 56px
+.flip-clock-wrapper ul li a div div.inn
+	+r(460)
+		font-size: 56px
+.flip-clock-divider
+	+r(460)
+		height: 84px
+
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow
+	background-color: $yellow
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow
+	background-color: $yellow
+
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow
+	background-color: $yellow
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow
+	background-color: $yellow
 
 .dots-list
 	margin: 0 0 30px
