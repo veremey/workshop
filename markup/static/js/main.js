@@ -79,15 +79,17 @@ if($(document).width() < 1220){
 		$('.trigger').toggleClass('is-active');
 	});
 } else {
-	$(function() {
-		$('#navigation').navpoints({
-			speed: 1000,
-			currentClass: 'is-active',
-			updateHash: true,
-			classToParent: true,
-			offset: 70
+	if($('#navigation').length) {
+		$(function() {
+			$('#navigation').navpoints({
+				speed: 1000,
+				currentClass: 'is-active',
+				updateHash: true,
+				classToParent: true,
+				offset: 70
+			});
 		});
-	});
+	}
 }
 
 $(document).on('click', function(el){
